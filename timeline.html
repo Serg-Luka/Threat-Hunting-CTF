@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CTF Event Timeline</title>
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      color: #333;
+    }
+    .container {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      max-width: 800px;
+      width: 90%;
+    }
+    h1 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #1a73e8;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+    }
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    th {
+      background-color: #1a73e8;
+      color: #ffffff;
+      font-weight: 600;
+    }
+    tr:nth-child(even) {
+      background-color: #f8f9fa;
+    }
+    tr:hover {
+      background-color: #e8f0fe;
+    }
+    .timestamp {
+      font-family: 'Courier New', Courier, monospace;
+      color: #d32f2f;
+      font-weight: 500;
+    }
+    .description {
+      max-width: 400px;
+    }
+    @media (max-width: 600px) {
+      table {
+        font-size: 14px;
+      }
+      th, td {
+        padding: 10px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>The Great Admin Heist CTF Timeline</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Timestamp (2025-05-07)</th>
+          <th>Event Description</th>
+          <th>Seconds Since Start</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="timestamp">02:00:36.794406</td>
+          <td class="description">(BitSentinelCore.exe) (malicious file) written to disk, earliest detection of malicious activity</td>
+          <td>0.000</td>
+        </tr>
+        <tr>
+          <td class="timestamp">02:02:14.6264638</td>
+          <td class="description">(BitSentinelCore.exe) executed by Bubba</td>
+          <td>97.832</td>
+        </tr>
+        <tr>
+          <td class="timestamp">02:02:14.9669902</td>
+          <td class="description">Registry modification in (HKCU\...\Run) by (BitSentinelCore.exe)</td>
+          <td>98.173</td>
+        </tr>
+        <tr>
+          <td class="timestamp">02:02:14.9749438</td>
+          <td class="description">Daily scheduled task (UpdateHealthTelemetry) created via (BitSentinelCore.exe -> cmd.exe -> schtasks.exe)</td>
+          <td>98.181</td>
+        </tr>
+        <tr>
+          <td class="timestamp">02:06:51.3594039</td>
+          <td class="description">Keylogger artifact (systemreport.lnk) written to disk, beginning data collection or exfiltration</td>
+          <td>374.565</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
